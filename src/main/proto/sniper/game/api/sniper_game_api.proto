@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+package sniper.game.api;
+
+option java_outer_classname = "SniperGameApi";
+
+import "kalix/annotations.proto";
+import "google/api/annotations.proto";
+import "google/protobuf/empty.proto";
+
+service LeaderboardDemo {
+  option (kalix.codegen) = {
+    event_sourced_entity: {
+      name: "sniper.game.api.GamingLeaderboardEntity"
+      entity_type: "leaderboard_entity"
+      state: "sniper.game.domain.LeaderBoardState"
+      events: "sniper.game.domain.PlayerAdded"
+    }
+  };
+
+  rpc NewPlayer(AddPlayer) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/player/{leaderboard_id}/add"
+      body: "*"
+    };
+  }
+
+  rpc FetchScores(GetScores) returns (LeaderBoard) {
+    option (google.api.http) = {
+      get: "/{leaderboard_id}/list"
+    };
+  }
+}
+message LeaderBoard {
+  repeated PlayerDetails scores = 1;
+}
+
+message PlayerDetails {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_score = 3;
+}
+
+message AddPlayer {
+  string leaderboard_id = 1 [(kalix.field).entity_key = true];
+  string player_id = 2;
+  string player_name = 3;
+  int32 player_score = 4;
+}
+
+message GetScores{
+  string leaderboard_id = 1 [(kalix.field).entity_key = true];
+}

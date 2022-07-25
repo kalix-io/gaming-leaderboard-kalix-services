@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package sniper.game.domain;
+
+option java_outer_classname = "SniperGameDomain";
+
+message LeaderBoardState {
+  repeated PlayerDetails scores = 1;
+}
+
+message PlayerDetails {
+  string player_id = 1;
+  string player_name = 2;
+  int32 player_score = 3;
+}
+
+message PlayerAdded {
+  PlayerDetails player = 1;
+}
