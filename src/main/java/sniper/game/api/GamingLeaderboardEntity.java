@@ -13,8 +13,7 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-// This class was initially generated based on the .proto definition by Akka
-// Serverless tooling. This is the implementation for the Event Sourced Entity
+// This class was initially generated based on the .proto definition by Kalix tooling. This is the implementation for the Event Sourced Entity
 // Service described in your sniper/game/api/sniper_game_api.proto file.
 //
 // As long as this file exists it will not be overwritten: you can maintain it
