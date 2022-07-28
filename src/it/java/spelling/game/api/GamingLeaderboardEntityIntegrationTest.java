@@ -1,11 +1,11 @@
-package sniper.game.api;
+package spelling.game.api;
 
 import com.google.protobuf.Empty;
 import kalix.javasdk.testkit.junit.KalixTestKitResource;
 import org.junit.ClassRule;
 import org.junit.Test;
-import sniper.game.Main;
-import sniper.game.domain.SniperGameDomain;
+import spelling.game.Main;
+import spelling.game.domain.SpellingGameDomain;
 
 import static java.util.concurrent.TimeUnit.*;
 
@@ -37,14 +37,14 @@ public class GamingLeaderboardEntityIntegrationTest {
   @Test
   public void newPlayerOnNonExistingEntity() throws Exception {
     // TODO: set fields in command, and provide assertions to match replies
-    // client.newPlayer(SniperGameApi.AddPlayer.newBuilder().build())
+    // client.newPlayer(SpellingGameApi.AddPlayer.newBuilder().build())
     //         .toCompletableFuture().get(5, SECONDS);
   }
 
   @Test
   public void fetchScoresOnNonExistingEntity() throws Exception {
     // TODO: set fields in command, and provide assertions to match replies
-    // client.fetchScores(SniperGameApi.GetScores.newBuilder().build())
+    // client.fetchScores(SpellingGameApi.GetScores.newBuilder().build())
     //         .toCompletableFuture().get(5, SECONDS);
   }
 }

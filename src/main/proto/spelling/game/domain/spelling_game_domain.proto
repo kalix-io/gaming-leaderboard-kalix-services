@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package sniper.game.domain;
+package spelling.game.domain;
 
-option java_outer_classname = "SniperGameDomain";
+option java_outer_classname = "SpellingGameDomain";
 
 message LeaderBoardState {
   repeated PlayerDetails scores = 1;

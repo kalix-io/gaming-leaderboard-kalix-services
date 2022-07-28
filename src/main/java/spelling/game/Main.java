@@ -1,9 +1,9 @@
-package sniper.game;
+package spelling.game;
 
 import kalix.javasdk.Kalix;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import sniper.game.api.GamingLeaderboardEntity;
+import spelling.game.api.GamingLeaderboardEntity;
 
 // This class was initially generated based on the .proto definition by Akka Serverless tooling.
 //

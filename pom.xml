@@ -7,13 +7,13 @@
   <version>4</version>
   <packaging>jar</packaging>
 
-  <name>Sniper Game LeaderBoard</name>
+  <name>Spelling Game LeaderBoard</name>
 
   <properties>
     <!-- TODO Update to your own Docker repository or Docker Hub scope -->
     <dockerImage>${project.artifactId}</dockerImage>
     <dockerTag>${project.version}</dockerTag>
-    <mainClass>sniper.game.Main</mainClass>
+    <mainClass>spelling.game.Main</mainClass>
 
     <jdk.target>11</jdk.target>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

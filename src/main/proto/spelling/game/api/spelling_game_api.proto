@@ -1,8 +1,8 @@
 syntax = "proto3";
 
-package sniper.game.api;
+package spelling.game.api;
 
-option java_outer_classname = "SniperGameApi";
+option java_outer_classname = "SpellingGameApi";
 
 import "kalix/annotations.proto";
 import "google/api/annotations.proto";
@@ -11,10 +11,10 @@ import "google/protobuf/empty.proto";
 service LeaderboardDemo {
   option (kalix.codegen) = {
     event_sourced_entity: {
-      name: "sniper.game.api.GamingLeaderboardEntity"
+      name: "spelling.game.api.GamingLeaderboardEntity"
       entity_type: "leaderboard_entity"
-      state: "sniper.game.domain.LeaderBoardState"
-      events: "sniper.game.domain.PlayerAdded"
+      state: "spelling.game.domain.LeaderBoardState"
+      events: "spelling.game.domain.PlayerAdded"
     }
   };
 

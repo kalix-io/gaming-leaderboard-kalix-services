@@ -1,4 +1,4 @@
-package sniper.game.api;
+package spelling.game.api;
 
 import com.google.protobuf.Empty;
 import kalix.javasdk.eventsourcedentity.EventSourcedEntity;
@@ -6,7 +6,7 @@ import kalix.javasdk.eventsourcedentity.EventSourcedEntityContext;
 import kalix.javasdk.testkit.EventSourcedResult;
 import org.junit.Ignore;
 import org.junit.Test;
-import sniper.game.domain.SniperGameDomain;
+import spelling.game.domain.SpellingGameDomain;
 
 import static org.junit.Assert.*;
 
